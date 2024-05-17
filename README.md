@@ -1,4 +1,4 @@
-# AWS RDS IAM Authentication Helper
+# AWS RDS IAM Authentication 
 
 This Go package provides functionality to connect to AWS RDS instances using IAM authentication. It supports both PostgreSQL and MySQL databases and can be used in conjunction with the `database/sql` package and the `gorm` ORM library.
 
@@ -24,8 +24,8 @@ import (
     "database/sql"
     "github.com/RohanPoojary/go-rds-iam"
     "github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/session"
+    "github.com/aws/aws-sdk-go/aws/credentials"
+    "github.com/aws/aws-sdk-go/aws/session"
 )
 
 func main() {
