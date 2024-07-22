@@ -226,9 +226,9 @@ func (d *GenericIAMDriver) open(dsn string) (driver.Conn, error) {
 	}
 }
 
-// RegisterAWSRDSIAMDrivers registers a new database driver for the given RDS type (e.g., "postgres" or "mysql")
+// RegisterDriver registers a new database driver for the given RDS type (e.g., "postgres" or "mysql")
 // that uses IAM authentication to connect to RDS instances.
-func RegisterAWSRDSIAMDrivers(sess *session.Session, rdsType ConnectionRDSType) string {
+func RegisterDriver(sess *session.Session, rdsType ConnectionRDSType) string {
 	driverName := "aws_" + string(rdsType) + "_iam"
 	sql.Register(driverName, &GenericIAMDriver{
 		awsSession:  sess,

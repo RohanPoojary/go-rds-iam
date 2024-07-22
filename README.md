@@ -44,7 +44,7 @@ func main() {
     }
 
     // Register the IAM driver for PostgreSQL
-    driverName := go_rds_iam.RegisterAWSRDSIAMDrivers(sess, go_rds_iam.PostgresRDSType)
+    driverName := go_rds_iam.RegisterDriver(sess, go_rds_iam.PostgresRDSType)
 
     // Connect to the RDS instance using the registered driver
     sqlDB, err := sql.Open(driverName, "your-rds-instance-dsn")
